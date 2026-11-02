@@ -1,8 +1,8 @@
-name: Install Brain.bin (Hyper-Escalation Mode)
+name: 🧠 Install Brain.bin (Hyper-Escalation Mode)
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "master" ]
   workflow_dispatch:
 
 jobs:
@@ -20,9 +20,9 @@ jobs:
           echo "brain.bin installed."
           echo "Brain rebooted..."
           echo "..."
-          echo "[INFO] -  now with 200 % Sudo for more performance "
+          echo "[INFO] -  now with 200 % Sudo for more performance"
           echo "root@linux-system:/usr/local/bin# grep brain --info"
-          echo "[brain.bin info] v2.1 (${{ github.event.head_commit.timestamp || '2026-11-02' }})"
+          echo "[brain.bin info] v2.1 (2026-11-02)"
           echo "[brain.bin info] Architecture: x86-cognition"
           echo "[brain.bin info] Status: Active (Hyper-Escalation Mode)"
           echo "[brain.bin info] Sudo privileges: 200% (Overclocked)"
