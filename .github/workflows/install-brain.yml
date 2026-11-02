@@ -14,17 +14,18 @@ jobs:
 
       - name: Execute 200% Sudo privilege escalation
         run: |
-          echo "root@linux-system:/usr/local/bin# sudo sudo apt install brain.bin"
-          echo "[sudo] brain.bin will be installed.. takes time cause source is corrupt"
-          sleep 2
-          echo "brain.bin installed."
-          echo "Brain rebooted..."
-          echo "..."
-          echo "[INFO] -  now with 200 % Sudo for more performance"
-          echo "root@linux-system:/usr/local/bin# grep brain --info"
-          echo "[brain.bin info] v2.1 (2026-11-02)"
-          echo "[brain.bin info] Architecture: x86-cognition"
-          echo "[brain.bin info] Status: Active (Hyper-Escalation Mode)"
-          echo "[brain.bin info] Sudo privileges: 200% (Overclocked)"
-          echo "[brain.bin info] Memory allocation: Optimised (100 GB Swap)"
-          echo "[brain.bin info] Commit Hash: ${{ github.sha }}"
+          cat << 'EOF'
+          root@linux-system:/usr/local/bin# sudo sudo apt install brain.bin
+          [sudo] brain.bin will be installed.. takes time cause source is corrupt
+          brain.bin installed.
+          Brain rebooted...
+          ...
+          [INFO] -  now with 200 % Sudo for more performance
+          root@linux-system:/usr/local/bin# grep brain --info
+          [brain.bin info] v2.1 (2026-11-02)
+          [brain.bin info] Architecture: x86-cognition
+          [brain.bin info] Status: Active (Hyper-Escalation Mode)
+          [brain.bin info] Sudo privileges: 200% (Overclocked)
+          [brain.bin info] Memory allocation: Optimised (100 GB Swap)
+          [brain.bin info] Commit Hash: ${{ github.sha }}
+          EOF
